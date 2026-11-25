@@ -1,0 +1,22 @@
+CIÊNCIASMICA — CORREÇÃO FINAL DE VERIFICAÇÃO E MOBILE
+
+O que foi corrigido neste pacote:
+- Restaurado src/main.ts completo (telas, navegação, ações, temporizador, vidas, trilhas sonoras, persistência e configurações).
+- Mantido src/content.ts original: 60 perguntas, 14 tópicos e bancos de jogos.
+- Incluído src/mobile-android.css para compactação responsiva e safe areas.
+- Atualizado workflow Android para android-actions/setup-android@v4 com platform-tools.
+- Alinhadas as dependências Capacitor em 8.0.2.
+
+TESTE EXECUTADO NESTE AMBIENTE:
+- npm run verify: PASSOU (conteúdo e UI).
+- npm run build: NÃO CONCLUÍDO neste ambiente, porque a instalação das dependências npm expirou e o comando terminou com vite: not found. Não declarar build/APK validado.
+
+COMO APLICAR:
+1. Faça backup do repositório atual.
+2. Extraia este ZIP.
+3. Envie/sobrescreva os arquivos mantendo exatamente os caminhos e pastas do ZIP no repositório GitHub.
+4. Faça commit na branch main.
+5. Abra Actions e execute Build Android APK.
+6. Se o workflow terminar com sucesso, baixe o artefato CienciasMica-Android-Debug.
+
+Não substitua nem apague src/content.ts. Ele contém o conteúdo original preservado.
