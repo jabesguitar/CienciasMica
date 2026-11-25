@@ -4,7 +4,7 @@ Data de preparação: 25/11/2026.
 
 ## Verificações locais executadas
 
-- `node --experimental-strip-types scripts/verify-content.mjs`: valida quantidade e estrutura do banco de 60 questões, índice de resposta correto, 14 tópicos, 16 afirmações de verdadeiro/falso, 12 pares de memória, 8 pares pergunta/resposta, 10 relações de palavras, 10 ligações de colunas e 8 termos do caça-palavras.
+- `node --experimental-strip-types scripts/verify-content.mjs`: valida quantidade e estrutura do banco de 45 questões, índice de resposta correto, 14 tópicos, 16 afirmações de verdadeiro/falso, 12 pares de memória, 8 pares pergunta/resposta, 10 relações de palavras, 10 ligações de colunas e 8 termos do caça-palavras.
 - `node scripts/verify-ui.mjs`: valida presença das telas e ações do quiz/jogos, cronômetro, fila de perguntas puladas, controle de áudio, persistência local, responsividade e áreas seguras.
 - `tsc --noEmit -p tsconfig.json`: verificação estática TypeScript.
 - `python -m py_compile tools/generate_android_icons.py`: verificação sintática do gerador de recursos Android.

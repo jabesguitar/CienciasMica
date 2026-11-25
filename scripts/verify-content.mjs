@@ -3,7 +3,7 @@ import { questions, studySections, trueFalseItems, memoryPairs, matchPairs, rela
 const fail = (message) => { console.error(`FAIL: ${message}`); process.exitCode = 1; };
 const assert = (condition, message) => { if (!condition) fail(message); };
 
-assert(questions.length === 60, `expected 60 quiz questions; got ${questions.length}`);
+assert(questions.length === 45, `expected 45 quiz questions; got ${questions.length}`);
 assert(new Set(questions.map(q => q.id)).size === questions.length, 'question IDs must be unique');
 for (const q of questions) {
   assert(q.options.length === 4, `question ${q.id} must have four choices`);

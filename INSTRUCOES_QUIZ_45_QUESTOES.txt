@@ -1,0 +1,13 @@
+CIÊNCIASMICA 1.5.0 — REVISÃO PEDAGÓGICA DO QUIZ
+
+O quiz principal foi reduzido de 60 para 45 questões.
+
+Critério editorial:
+- Priorizar os conceitos centrais do Capítulo 12.
+- Evitar perguntas repetitivas ou excessivamente específicas de datas, nomes e exemplos isolados.
+- Manter cobertura dos temas: materiais naturais e sintéticos, recursos naturais, impactos ambientais, plásticos e microplásticos, reciclagem, medicamentos, substâncias psicoativas, segurança e transformações da matéria.
+- Preservar alternativas, gabaritos, dicas e explicações das questões mantidas.
+- Os IDs foram reorganizados de 1 a 45.
+- Os demais modos de jogo e seus bancos de dados foram preservados.
+
+A quantidade esperada no verificador automático foi atualizada para 45.

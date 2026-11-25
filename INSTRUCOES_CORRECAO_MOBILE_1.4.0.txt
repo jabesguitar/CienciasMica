@@ -1,0 +1,37 @@
+CIÊNCIASMICA 1.4.0 — CORREÇÃO MOBILE E ÍCONE ANDROID
+
+O QUE FOI ALTERADO
+- src/mobile-android.css: ajustes de tipografia, botões e áreas de toque para celular.
+  A interface deixa de reduzir textos a tamanhos minúsculos. Telas com conteúdo longo
+  podem rolar verticalmente; isso é intencional para manter leitura e acessibilidade.
+- tools/generate_android_icons.py: gerador completo restaurado e corrigido para usar
+  o recurso exclusivo cienciasmica_launcher_background, evitando conflito com a cor
+  padrão ic_launcher_background criada pelo Android/Capacitor.
+- public/brand/icon-1024.png e design-assets/icon-4k.png: atualizados com o ícone
+  transparente de 2048 x 2048 enviado pelo usuário.
+- Os arquivos de perguntas, tópicos, jogos, tempos e regras não foram alterados.
+
+TESTES EXECUTADOS NESTA CÓPIA
+- node --experimental-strip-types scripts/verify-content.mjs: PASSOU
+  (45 perguntas, 14 tópicos e bancos de dados dos jogos).
+- node scripts/verify-ui.mjs: PASSOU
+  (navegação, ações, temporizador, áudio, progresso e estilos responsivos).
+- python3 -m py_compile tools/generate_android_icons.py: PASSOU.
+- python3 tools/generate_android_icons.py: PASSOU na geração dos recursos de marca.
+- A compilação APK final deve ser confirmada pelo GitHub Actions após o envio.
+
+COMO APLICAR
+1. No GitHub, abra o repositório CienciasMica e use Add file > Upload files.
+2. Extraia este ZIP no computador e abra a pasta CienciasMica-main.
+3. Envie os arquivos/pastas mantendo os mesmos caminhos. Quando o GitHub perguntar,
+   substitua os arquivos existentes. Não apague src/content.ts.
+4. Faça commit na branch main.
+5. Abra Actions > Build CienciasMica Android APK e aguarde.
+6. Se concluir com sucesso, abra a execução e baixe o artefato
+   CienciasMica-Android-Debug. O APK fica dentro do ZIP do artefato.
+
+IMPORTANTE
+- Este ZIP contém o projeto-fonte, não um APK já compilado.
+- O APK só estará pronto depois de o GitHub Actions terminar com sucesso.
+- Para o ícone nativo, o workflow cria a plataforma Android, executa o gerador
+  e sincroniza os recursos antes de compilar.

@@ -35,7 +35,7 @@
 ## Implementação preparada
 - Vite + TypeScript + Capacitor 8.6.2 + Splash Screen.
 - 14 tópicos de estudo; arquivo textual `RESUMO_CIENCIAS.md`.
-- 60 questões no quiz principal, com alternativas e explicações.
+- 45 questões no quiz principal, com alternativas e explicações.
 - 7 jogos alternativos: pergunta/resposta, relação de palavras, ligar colunas, memória (12 pares), verdadeiro/falso, caça-palavras e palavras cruzadas.
 - Temporizador individual por questão; vidas por nível; dica e fila de perguntas puladas.
 - Trilhas instrumentais procedurais por tela/jogo e efeitos via Web Audio; controle de volume e mudo persistido.

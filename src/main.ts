@@ -213,7 +213,7 @@ function homeView() {
         <div class="hero-actions"><button class="primary-button" data-action="difficulty">Começar quiz ${icon('arrow')}</button><button class="ghost-button" data-action="summary">Abrir resumo ${icon('book')}</button></div>
       </div>
       <div class="hero-art"><img src="/brand/pwa-icon-192.png" alt="Frasco de laboratório com folha, engrenagem e moléculas"/><span class="orbit-tag tag-top">IDEIAS EM MOVIMENTO</span><span class="orbit-tag tag-bottom">CURIOSIDADE · CIÊNCIA · FUTURO</span></div>
-      <div class="hero-foot"><span>✨ <b>60 perguntas</b> para explorar</span><span>⌁ 7 modos de jogo</span><span>◌ funciona offline</span></div>
+      <div class="hero-foot"><span>✨ <b>45 perguntas</b> para explorar</span><span>⌁ 7 modos de jogo</span><span>◌ funciona offline</span></div>
     </section>
     <section class="welcome-row"><div><span class="eyebrow">SEU RITMO, SUA DESCOBERTA</span><h3>Por onde vamos começar?</h3></div><span class="chapter-chip">6º ANO <b>·</b> ENSINO FUNDAMENTAL</span></section>
     <div class="feature-grid">

@@ -5,7 +5,7 @@
 - Recebido o link `jabesguitar/CienciasMica` e feita a auditoria: repositório sem código-fonte prévio. A integração GitHub recusou escrita com HTTP 403; nenhum commit foi criado no remoto.
 - Organizadas 16 fotos do ZIP (páginas 43–57 e 59) e a foto de abertura do capítulo 12. Registrada a ausência da página 58.
 - Elaborado resumo didático de 14 tópicos, sem presumir o conteúdo da página ausente; incluída distinção entre transformações físicas e químicas.
-- Banco do quiz ampliado para 60 questões, com quatro alternativas, dicas e explicações.
+- Banco do quiz revisado para 45 questões essenciais, com quatro alternativas, dicas e explicações.
 - Implementados os sete jogos complementares solicitados.
 - Implementadas dificuldades com tempos e vidas, embaralhamento, fila de perguntas puladas, dica, cronômetro por questão e retorno inicial ao esgotar vidas.
 - Criados estilos responsivos em modo escuro premium e paleta Lona de Algodão / Tinta Berinjela / Laranja Papaia.

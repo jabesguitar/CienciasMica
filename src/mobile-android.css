@@ -106,3 +106,134 @@ body:has(.summary-layout) .content-area{overflow:auto}.summary-layout{display:fl
 .main-area{padding-bottom:calc(54px + env(safe-area-inset-bottom))}.home-grid{grid-template-rows:minmax(125px,33%) minmax(0,1fr)}
 .hero-copy h2{font-size:22px;margin:6px 0}.hero-copy p,.game-tile p{display:none}.memory-card{padding:2px}
 }
+
+
+
+/* CiênciasMica — Android native-feel readability pass (1.4.0)
+   Overrides the earlier compact desktop-scaled mobile rules with touch-first sizing. */
+@media (max-width: 820px) {
+  html { font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body, button, input, textarea, select { font-size: 16px; }
+  .main-area { padding-left: 16px; padding-right: 16px; }
+  .topbar { flex-basis: 64px; min-height: 64px; height: 64px; }
+  .topbar-copy h1 { font-size: 20px; }
+  .topbar-copy .eyebrow { font-size: 10px; }
+  .icon-button { width: 42px; height: 42px; }
+  .mobile-nav { height: 58px; bottom: calc(8px + env(safe-area-inset-bottom)); }
+  .mobile-nav-item { width: 50px; height: 48px; }
+  .mobile-nav-item .ico { width: 22px; height: 22px; }
+
+  /* Home: readable hero and large touch targets; allow the page to scroll on short phones. */
+  .content-area { overflow-y: auto; overscroll-behavior: contain; }
+  .home-grid { height: auto; min-height: 100%; grid-template-rows: auto auto; overflow: visible; gap: 14px; }
+  .hero-card { min-height: 245px; height: auto; padding: 22px 18px 48px; }
+  .hero-copy { max-width: 76%; }
+  .hero-kicker { font-size: 10px; }
+  .hero-copy h2, .hero-copy h2 em { font-size: clamp(27px, 7vw, 38px); line-height: 1.08; }
+  .hero-copy p { font-size: 14px; line-height: 1.45; }
+  .hero-actions { flex-wrap: wrap; gap: 9px; }
+  .hero-actions .primary-button, .hero-actions .ghost-button { min-height: 44px; padding: 10px 14px; font-size: 13px; }
+  .hero-art { width: clamp(104px, 30vw, 150px); height: auto; opacity: .48; }
+  .hero-foot span { font-size: 10px; }
+  .feature-grid { height: auto; grid-template-columns: 1fr; grid-template-rows: none; gap: 10px; }
+  .feature-card { min-height: 112px; height: auto; padding: 15px; border-radius: 16px; }
+  .feature-symbol { width: 42px; height: 42px; }
+  .feature-top { font-size: 10px; }
+  .feature-card h3 { font-size: 18px; }
+  .feature-card p { font-size: 13px; line-height: 1.4; }
+  .feature-link { font-size: 12px; }
+
+  /* Games catalog: two comfortable columns, larger labels and touch areas. */
+  .games-intro { height: auto; min-height: 100%; overflow: visible; }
+  .games-callout { min-height: 72px; padding: 12px; }
+  .games-callout b { font-size: 14px; }
+  .games-callout p { font-size: 12px; line-height: 1.35; }
+  .games-callout .primary-button { min-height: 40px; padding: 9px 12px; font-size: 12px; }
+  .games-grid { flex: none; grid-template-columns: repeat(2, minmax(0,1fr)); grid-template-rows: none; grid-auto-rows: minmax(132px, auto); gap: 10px; overflow: visible; }
+  .game-tile { min-height: 132px; height: auto; padding: 12px; }
+  .game-number, .game-meta { font-size: 10px; }
+  .game-emoji { font-size: 25px; }
+  .game-tile h3 { font-size: 14px; line-height: 1.25; }
+  .game-tile p { display: block; font-size: 11px; line-height: 1.3; }
+
+  /* Difficulty cards and quiz controls sized for fingers, not mouse pointers. */
+  .difficulty-stage { height: auto; min-height: 100%; padding: 14px 0; }
+  .difficulty-heading h2 { font-size: 25px; }
+  .difficulty-heading p { font-size: 13px; }
+  .difficulty-cards { grid-template-columns: 1fr; gap: 10px; }
+  .difficulty-card { height: auto; min-height: 118px; padding: 15px; }
+  .difficulty-glyph { font-size: 24px; }
+  .difficulty-label, .difficulty-card h3 small { font-size: 11px; }
+  .difficulty-card h3 { font-size: 22px; }
+  .difficulty-hearts { font-size: 16px; }
+  .difficulty-bottom, .difficulty-foot { font-size: 12px; }
+
+  .quiz-layout { height: auto; min-height: 100%; overflow: visible; gap: 10px; }
+  .quiz-main { flex: none; }
+  .quiz-status-row .topic-tag { font-size: 11px; padding: 7px 9px; }
+  .question-counter { font-size: 14px; }
+  .quiz-progress-track { height: 5px; }
+  .quiz-question-card { flex: none; min-height: 0; overflow: visible; padding: 16px; }
+  .quiz-question-card .eyebrow { font-size: 10px; }
+  .quiz-question-card h2 { font-size: clamp(17px, 4.6vw, 21px); line-height: 1.35; margin: 9px 0 14px; }
+  .answer-list { flex: none; grid-template-columns: 1fr; grid-auto-rows: auto; gap: 9px; }
+  .answer-option { min-height: 52px; padding: 11px 12px; gap: 10px; border-radius: 12px; font-size: 15px; line-height: 1.35; }
+  .answer-letter { flex-basis: 30px; height: 30px; font-size: 12px; }
+  .hint-inline, .feedback-box { margin-top: 10px; padding: 10px 12px; font-size: 12px; line-height: 1.4; }
+  .quiz-actions { margin-top: 10px; gap: 8px; flex-wrap: wrap; }
+  .quiz-actions .text-button, .quiz-actions .outline-button, .quiz-actions .primary-button { min-height: 42px; padding: 9px 12px; font-size: 12px; }
+  .quiz-rail { gap: 8px; }
+  .rail-card { padding: 10px; }
+  .rail-card .eyebrow, .timer-card small, .score-card small, .lives-card p { font-size: 10px; }
+  .timer-face>div { width: 26px; height: 26px; }
+  .timer-face b { font-size: 17px; }
+  .life { font-size: 15px; }
+  .score-card>b { font-size: 19px; }
+  .exit-quiz { min-height: 40px; font-size: 11px; }
+
+  /* Games: retain each board, but make labels and controls readable. */
+  .game-board-head h2, .match-scoreline h2, .word-head h2, .crossword-stage h2 { font-size: 19px; }
+  .game-board-head p, .match-scoreline p, .word-head p, .crossword-stage p { font-size: 12px; line-height: 1.35; }
+  .game-score-chip { font-size: 13px; }
+  .memory-grid { gap: 6px; }
+  .memory-card { padding: 5px; }
+  .memory-back .ico { width: 23px; height: 23px; }
+  .memory-back small { font-size: 9px; }
+  .memory-front { font-size: clamp(10px, 2.8vw, 13px); line-height: 1.2; }
+  .board-foot { font-size: 11px; flex-wrap: wrap; }
+  .board-foot .outline-button, .board-foot .text-button { min-height: 40px; font-size: 11px; padding: 8px 10px; }
+  .column-title { font-size: 10px; }
+  .match-choice { font-size: clamp(9px, 2.5vw, 12px); line-height: 1.2; }
+  .match-choice span { width: 20px; height: 20px; font-size: 9px; }
+  .tf-card { padding: 20px 15px; }
+  .tf-symbol { font-size: 42px; }
+  .tf-card>p { font-size: 18px; line-height: 1.4; }
+  .tf-choice { min-height: 48px; font-size: 14px; }
+  .word-play { grid-template-columns: minmax(0,1fr) 115px; }
+  .letter-cell { font-size: clamp(9px, 2.6vw, 13px); }
+  .word-list .column-title, .word-term { font-size: 10px; }
+  .word-term { padding: 6px 0; }
+  .cross-clue b, .cross-clue p { font-size: 10px; line-height: 1.3; }
+  .cross-cell input { font-size: 12px; }
+
+  /* Summary, progress and settings are naturally scrollable on phones. */
+  body:has(.summary-layout) .content-area, .progress-page, .settings-page { overflow-y: auto; }
+  .index-item { font-size: 11px; padding: 9px 10px; }
+  .study-card { padding: 17px; }
+  .study-card h2 { font-size: 23px; }
+  .study-intro, .study-point p { font-size: 14px; line-height: 1.55; }
+  .study-photo { height: 170px; }
+  .study-footer .outline-button, .study-footer .primary-button { min-height: 42px; padding: 9px 12px; font-size: 11px; }
+  .results-stage { max-height: none; overflow: visible; padding: 20px 15px; }
+  .results-stage h2 { font-size: 24px; }
+  .results-stage>p, .result-message { font-size: 13px; }
+  .result-stats b { font-size: 20px; }
+  .result-stats span { font-size: 10px; }
+  .result-actions .primary-button, .result-actions .outline-button, .result-actions .text-button { min-height: 42px; padding: 9px 12px; font-size: 11px; }
+}
+@media (max-width: 390px) {
+  .main-area { padding-left: 12px; padding-right: 12px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .answer-option { font-size: 14px; }
+  .quiz-rail { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}

@@ -2,7 +2,7 @@ CIÊNCIASMICA — CORREÇÃO FINAL DE VERIFICAÇÃO E MOBILE
 
 O que foi corrigido neste pacote:
 - Restaurado src/main.ts completo (telas, navegação, ações, temporizador, vidas, trilhas sonoras, persistência e configurações).
-- Mantido src/content.ts original: 60 perguntas, 14 tópicos e bancos de jogos.
+- Mantido src/content.ts original: 45 perguntas, 14 tópicos e bancos de jogos.
 - Incluído src/mobile-android.css para compactação responsiva e safe areas.
 - Atualizado workflow Android para android-actions/setup-android@v4 com platform-tools.
 - Alinhadas as dependências Capacitor em 8.0.2.
