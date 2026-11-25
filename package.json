@@ -1,7 +1,8 @@
+
 {
   "name": "cienciasmica",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
@@ -15,7 +16,7 @@
   "dependencies": {
     "@capacitor/android": "8.6.2",
     "@capacitor/core": "8.6.2",
-    "@capacitor/splash-screen": "8.6.2"
+    "@capacitor/splash-screen": "8.0.2"
   },
   "devDependencies": {
     "@capacitor/cli": "8.6.2",
