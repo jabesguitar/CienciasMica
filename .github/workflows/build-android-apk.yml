@@ -1,17 +1,20 @@
 
-name: Build Android APK
+name: Build CienciasMica Android APK
 
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: read
 
 jobs:
   build:
+    name: Build Android APK
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,33 +31,36 @@ jobs:
           java-version: '21'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Verify content and compile web app
-        run: |
-          npm run verify
-          npm run build
+      - name: Verify project content
+        run: npm run verify
+
+      - name: Build web application
+        run: npm run build
 
       - name: Create Android platform
         run: npx cap add android
 
-      - name: Apply Android launcher resources
+      - name: Generate Android icons
         run: |
           python3 -m venv /tmp/ci-venv
           /tmp/ci-venv/bin/pip install Pillow
           /tmp/ci-venv/bin/python tools/generate_android_icons.py
 
-      - name: Sync Capacitor Android project
+      - name: Sync Capacitor
         run: npx cap sync android
 
-      - name: Build APK Debug
+      - name: Build APK
         working-directory: android
         run: ./gradlew assembleDebug --no-daemon
 
-      - name: Upload APK
+      - name: Upload Android APK
         uses: actions/upload-artifact@v4
         with:
           name: CienciasMica-Android-Debug
